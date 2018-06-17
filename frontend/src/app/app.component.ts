@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'ngf-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngf';
+
+  public posts: any;
+
+  constructor(http: HttpClient) {
+    http.get('/api/post').subscribe(data => {
+      this.posts = data;
+    });
+  }
+
 }
