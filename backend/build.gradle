@@ -26,6 +26,7 @@ repositories {
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('javax.xml.bind:jaxb-api') // Hibernate typically requires JAXB that’s no longer provided by default.
     runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
