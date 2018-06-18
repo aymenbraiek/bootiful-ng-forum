@@ -1,6 +1,6 @@
 <div>
-  <h1>Welcome to the Bootiful Angular Forum!</h1>
+    <h1>Welcome to the Bootiful Angular Forum!</h1>
 </div>
 <ul>
-  <li *ngFor="let post of posts">{{ post.name }} - {{ post.content }}</li>
+    <li *ngFor="let post of posts">{{ post.getDisplayName() }}</li>
 </ul>
