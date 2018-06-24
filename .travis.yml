@@ -1,0 +1,11 @@
+dist: trusty
+sudo: required
+
+matrix:
+  include:
+    - language: java
+      jdk: oraclejdk10
+      before_script:
+        - cd backend
+      script:
+        - ./gradlew build
