@@ -8,4 +8,5 @@ matrix:
       before_script:
         - cd backend
       script:
-        - gradle build
+        - ll gradle/wrapper
+        - ./gradlew build
