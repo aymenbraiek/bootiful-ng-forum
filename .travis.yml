@@ -8,5 +8,12 @@ matrix:
       before_script:
         - cd backend
       script:
-        - ll gradle/wrapper
+        - ls -l gradle/wrapper
         - ./gradlew build
+    - language: node_js
+      node_js:
+        - node
+      script:
+        - npm run lint
+        - npm run test
+        - npm run build
