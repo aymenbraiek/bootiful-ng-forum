@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
-import { Deserialize } from 'cerialize';
 import { Post } from './model/post';
+import { PostResourceService } from './resource/post-resource.service';
 
 @Component({
     selector: 'ngf-root',
@@ -13,9 +12,9 @@ export class AppComponent {
 
     public posts: Array<Post>;
 
-    constructor(http: HttpClient) {
-        http.get('/api/posts').subscribe((data: Object) => {
-            this.posts = Deserialize(data, Post);
+    constructor(postResourceService: PostResourceService) {
+        postResourceService.findAll().subscribe((posts: Array<Post>) => {
+            this.posts = posts;
         });
     }
 
