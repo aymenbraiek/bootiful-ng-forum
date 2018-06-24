@@ -14,6 +14,7 @@ matrix:
       node_js:
         - node
       before_script:
+        - npm install -g @angular/cli
         - cd frontend
       script:
         - npm run lint
