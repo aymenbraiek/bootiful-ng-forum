@@ -9,7 +9,7 @@ matrix:
         - cd backend
       script:
         - ls -l gradle/wrapper
-        - ./gradlew build
+        - java -cp ./gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build
     - language: node_js
       node_js:
         - node
@@ -17,6 +17,4 @@ matrix:
         - npm install -g @angular/cli
         - cd frontend
       script:
-        - npm run lint
-        - npm run test
-        - npm run build
+        - ng build --prod --aot
