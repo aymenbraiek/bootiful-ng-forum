@@ -8,13 +8,11 @@ matrix:
       before_script:
         - cd backend
       script:
-        - ls -l gradle/wrapper
-        - java -cp ./gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain build
+        - ./gradlew build
     - language: node_js
       node_js:
         - node
       before_script:
-        - npm install -g @angular/cli
         - cd frontend
       script:
         - ng build --prod --aot
