@@ -16,4 +16,4 @@ matrix:
       before_script:
         - cd frontend
       script:
-        - ng build --prod --aot
+        - npm run build
