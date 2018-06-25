@@ -8,6 +8,7 @@ matrix:
       before_script:
         - cd backend
       script:
+        - pwd
         - ./gradlew build
     - language: node_js
       node_js:
