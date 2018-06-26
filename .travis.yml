@@ -16,6 +16,8 @@ matrix:
     - language: node_js
       node_js:
         - node
+      addons:
+        chrome: stable
       before_script:
         - cd frontend
         - npm install
