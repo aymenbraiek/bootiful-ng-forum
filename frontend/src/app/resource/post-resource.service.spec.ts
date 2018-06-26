@@ -1,4 +1,5 @@
 import { TestBed, inject } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PostResourceService } from './post-resource.service';
 
@@ -6,7 +7,12 @@ describe('PostResourceService', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [PostResourceService]
+            providers: [
+                PostResourceService
+            ],
+            imports: [
+                HttpClientTestingModule
+            ]
         });
     });
 
