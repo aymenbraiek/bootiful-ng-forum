@@ -1,5 +1,9 @@
 dist: trusty
-sudo: true
+sudo: required
+
+branches:
+  only:
+  - master
 
 matrix:
   include:
@@ -16,4 +20,7 @@ matrix:
         - cd frontend
         - npm install
       script:
-        - npm run build
+        - npm run lint
+        - npm run test
+        - npm run e2e
+        - npm run build --prod --aot
