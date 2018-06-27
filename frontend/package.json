@@ -6,9 +6,10 @@
     "start": "ng serve --open",
     "build": "ng build",
     "test": "ng test",
-    "test-travis-ci": "ng test --watch=false --browsers=ChromeHeadlessNoSandbox",
+    "test-travis-ci": "ng test --single-run --no-progress --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "e2e-travis-ci": "ng e2e --no-progress --config=protractor-travis-ci.conf.js"
   },
   "private": true,
   "dependencies": {
