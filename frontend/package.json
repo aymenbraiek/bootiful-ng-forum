@@ -9,7 +9,7 @@
     "test-travis-ci": "ng test --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "e2e-travis-ci": "ng e2e --config=protractor-travis-ci.conf.js"
+    "e2e-travis-ci": "ng e2e --protractor-config=e2e/protractor-travis-ci.conf.js"
   },
   "private": true,
   "dependencies": {
